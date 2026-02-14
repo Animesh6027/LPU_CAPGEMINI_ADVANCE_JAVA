@@ -13,13 +13,8 @@
             jdbc:mysql://localhost:3306/hibernate_DB
         </property>
 
-        <property name="hibernate.connection.username">
-            root
-        </property>
-
-        <property name="hibernate.connection.password">
-            Anim@4748
-        </property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Anim@4748</property>
 
         <property name="hibernate.dialect">
             org.hibernate.dialect.MySQL5Dialect
@@ -29,6 +24,14 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
 
+        <!-- CACHE SETTINGS -->
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        <property name="hibernate.cache.use_query_cache">true</property>
+        <property name="hibernate.cache.region.factory_class">
+            org.hibernate.cache.ehcache.EhCacheRegionFactory
+        </property>
+
+        <!-- Mapping -->
         <mapping class="com.hibernate.hibernate_demo.entity.Student"/>
 
     </session-factory>

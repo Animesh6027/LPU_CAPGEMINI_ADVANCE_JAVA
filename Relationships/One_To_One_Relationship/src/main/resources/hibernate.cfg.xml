@@ -10,7 +10,7 @@
         </property>
 
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost:3306/hibernate_DB
+            jdbc:mysql://localhost:3306/Mapping
         </property>
 
         <property name="hibernate.connection.username">root</property>
@@ -32,7 +32,10 @@
         </property>
 
         <!-- Mapping -->
-        <mapping class="com.hibernate.hibernate_demo.entity.Student"/>
+        <mapping class="OneToOne.Person"/>
+		<mapping class="OneToOne.Passport"/>
+
+        
 
     </session-factory>
 </hibernate-configuration>
